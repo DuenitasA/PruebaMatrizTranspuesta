@@ -19,7 +19,7 @@ int main(void)
     {
         for (int j = 0; j < b; j++)
         {
-            matriz[i][j] = rand()%101;
+            matriz[i][j] = rand() % 101;
         }
     }
 
@@ -32,5 +32,25 @@ int main(void)
         printf("\n");
     }
 
+    int transpuesta[a][b];
+
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            transpuesta[i][j] = matriz[j][i];
+        }
+    }
+    printf("\n");
+    printf("\n");
+    printf("\n");
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            printf("%d ", transpuesta[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
