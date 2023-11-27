@@ -52,5 +52,28 @@ int main(void)
         }
         printf("\n");
     }
+
+    printf("\n");
+    printf("\n");
+    printf("\n");
+
+    int suma[a][b];
+        printf("La suma de las dos matrices es\n");
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            suma[i][j] = matriz[i][j] + transpuesta[i][j];
+        }
+    }
+
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            printf("%d ", suma[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
