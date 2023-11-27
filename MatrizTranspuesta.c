@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 
-
-int main(void){
+int main(void)
+{
 
     srand(time(NULL));
     int a, b;
@@ -17,14 +17,20 @@ int main(void){
 
     for (int i = 0; i < a; i++)
     {
-        for (int j = 0; i < b; j++)
+        for (int j = 0; j < b; j++)
         {
-            matriz[a]
+            matriz[i][j] = rand()%101;
         }
-        
     }
-    
 
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
