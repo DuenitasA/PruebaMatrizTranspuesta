@@ -14,7 +14,7 @@ int main(void)
     scanf("%d", &b);
 
     int matriz[a][b];
-
+    printf("La matriz original es:\n");
     for (int i = 0; i < a; i++)
     {
         for (int j = 0; j < b; j++)
@@ -32,21 +32,21 @@ int main(void)
         printf("\n");
     }
 
-    int transpuesta[a][b];
+    int transpuesta[b][a];
 
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < b; i++)
     {
-        for (int j = 0; j < b; j++)
+        for (int j = 0; j < a; j++)
         {
             transpuesta[i][j] = matriz[j][i];
         }
     }
     printf("\n");
     printf("\n");
-    printf("\n");
-    for (int i = 0; i < a; i++)
+    printf("La matriz transpuesta es:\n");
+    for (int i = 0; i < b; i++)
     {
-        for (int j = 0; j < b; j++)
+        for (int j = 0; j < a; j++)
         {
             printf("%d ", transpuesta[i][j]);
         }
