@@ -57,6 +57,7 @@ int main(void)
     printf("\n");
     printf("\n");
 
+    if (a == b){
     int suma[a][b];
         printf("La suma de las dos matrices es\n");
     for (int i = 0; i < a; i++)
@@ -74,6 +75,7 @@ int main(void)
             printf("%d ", suma[i][j]);
         }
         printf("\n");
+    }
     }
     return 0;
 }
