@@ -32,50 +32,50 @@ int main(void)
         printf("\n");
     }
 
-    int transpuesta[b][a];
+    int segunda[a][b];
 
-    for (int i = 0; i < b; i++)
+    for (int i = 0; i < a; i++)
     {
-        for (int j = 0; j < a; j++)
+        for (int j = 0; j < b; j++)
         {
-            transpuesta[i][j] = matriz[j][i];
+            segunda[i][j] = rand() % 101;
         }
     }
     printf("\n");
     printf("\n");
-    printf("La matriz transpuesta es:\n");
-    for (int i = 0; i < b; i++)
+    printf("La segunda matriz es:\n");
+    for (int i = 0; i < a; i++)
     {
-        for (int j = 0; j < a; j++)
+        for (int j = 0; j < b; j++)
         {
-            printf("%d ", transpuesta[i][j]);
+            printf("%d ", segunda[i][j]);
         }
         printf("\n");
     }
 
     printf("\n");
     printf("\n");
-    printf("\n");
 
-    if (a == b){
-    int suma[a][b];
+    if (a == b)
+    {
+        int suma[a][b];
         printf("La suma de las dos matrices es\n");
-    for (int i = 0; i < a; i++)
-    {
-        for (int j = 0; j < b; j++)
+        for (int i = 0; i < a; i++)
         {
-            suma[i][j] = matriz[i][j] + transpuesta[i][j];
+            for (int j = 0; j < b; j++)
+            {
+                suma[i][j] = matriz[i][j] + segunda[i][j];
+            }
         }
-    }
 
-    for (int i = 0; i < a; i++)
-    {
-        for (int j = 0; j < b; j++)
+        for (int i = 0; i < a; i++)
         {
-            printf("%d ", suma[i][j]);
+            for (int j = 0; j < b; j++)
+            {
+                printf("%d ", suma[i][j]);
+            }
+            printf("\n");
         }
-        printf("\n");
-    }
     }
     return 0;
 }
